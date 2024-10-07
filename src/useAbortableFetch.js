@@ -36,6 +36,7 @@ const useAbortableFetch = (url) => {
       setJson(data);
     } catch (err) {
       if (err.name !== 'AbortError') {
+        console.error(err);
         setError(err);
       }
     } finally {
